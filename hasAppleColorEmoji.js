@@ -1,6 +1,6 @@
 function hasAppleColorEmoji () {
   var widths = []
-  tags = [document.createElement('span'), document.createElement('span')]
+  var tags = [document.createElement('span'), document.createElement('span')]
   tags.forEach(function(tag, i) {
     tag.innerText = '☺'
     tag.style.fontFamily = i === 1 ? 'thisisnotafont' : 'AppleColorEmoji'
