@@ -1,12 +1,12 @@
 function hasAppleColorEmoji () {
-  var widths = []
+  var dimentions = []
   tags = [document.createElement('span'), document.createElement('span')]
   tags.forEach(function(tag, i) {
     tag.innerText = '☺'
     tag.style.fontFamily = i === 1 ? 'thisisnotafont' : 'AppleColorEmoji'
     document.body.appendChild(tag)
-    widths.push(tag.offsetWidth)
+    dimentions.push([tag.offsetWidth, tag.offsetHeight])
     document.body.removeChild(tag)
   })
-  return widths[0] != widths[1]
+  return dimentions[0] != dimentions[1]
 }
